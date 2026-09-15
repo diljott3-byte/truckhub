@@ -1,48 +1,31 @@
-# TRUCK HUB — static website
+# Truck Hub — Pearl + Graphite Upgrade
 
-A premium multi-page truck sales website, ready for direct GitHub upload. No npm installation, framework, database, API key or build command is required.
+This is a mobile-first static dealership website. Open `index.html` locally, or deploy the folder to GitHub Pages, Netlify, Vercel, or another static host.
 
-## Upload to GitHub
+## Important launch setup
 
-1. Extract the ZIP on your computer.
-2. Open your GitHub repository and choose **Add file → Upload files**.
-3. Drag all extracted files and the entire `assets` folder into the upload area. `index.html` must be at the repository root, beside `inventory.html`, `about.html`, and `contact.html`. Do not upload the ZIP itself.
-4. Commit the files.
-5. Open **Settings → Pages**. Select **Deploy from a branch**, choose **main** and **/(root)**, then save. GitHub shows the website link after deployment finishes.
+1. Open `assets/js/config.js` and add the real phone, WhatsApp number, email, location and social URLs.
+2. Replace the demonstration inventory in `assets/js/inventory-data.js` with verified trucks.
+3. Replace sample truck photography with real inventory photos before advertising any listing as real.
+4. The contact and finance forms include Netlify-compatible markup. On unsupported static hosts the site automatically gives the visitor copy/email/WhatsApp fallbacks when those contact values are configured.
+5. Replace `assets/video/hero-drive.mp4` and `hero-drive-mobile.mp4` with a real truck-driving MP4 if you want true live-action footage. The included MP4 files are lightweight cinematic motion sequences generated from the project's supplied truck images so the project remains self-contained and copyright-safe.
+6. When the production domain is known, create `sitemap.xml` from `sitemap-template.xml`, replace `{{SITE_URL}}` with the real origin, and add `Sitemap: https://your-domain/sitemap.xml` to `robots.txt`.
+7. Review and replace the draft Privacy/Terms copy with business-approved legal text.
 
-For an existing website, remove any obsolete index file that would take precedence. All links use relative paths, so this works with a repository URL or a custom domain.
+## Major upgrades included
 
-GitHub instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-Upload instructions: https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-
-## Included files
-
-- `index.html` — Home with a real MP4 driving-truck hero
-- `inventory.html` — searchable illustrative truck showcase
-- `about.html` — About TRUCK HUB
-- `contact.html` — contact details and vehicle-interest context
-- `404.html` — not-found page
-- `assets/styles.css` — responsive styling
-- `assets/app.js` — menu, sticky header, motion controls and filters
-- `assets/config.js` — editable contact details
-- `assets/truck-hero.mp4` — 8-second Full HD H.264 video, about 1.5 MB
-- `assets/hero.webp`, `assets/yard.webp` — optimized images
-- `assets/favicon.svg` — TH brand icon
-- `.nojekyll` — tells GitHub Pages to serve static files directly
-- `CREDITS.md` — media provenance and terms
-
-## Add your contact details
-
-Edit `assets/config.js`. Fill the existing phone, email, address and hours values. They update across all pages. Leave a value empty to keep its coming-soon label. Do not put passwords or secret keys in this file.
-
-Contact details are not yet configured. The site does not send form submissions. Showcase vehicles are illustrative, not confirmed stock. Replace showcase content with approved vehicle data and photos before representing it as live inventory.
-
-## Video behaviour
-
-The local MP4 plays muted, inline and on a loop, with a pause/play control. Playback pauses while the browser tab is hidden. Reduced-motion preferences are respected; the visitor can explicitly start playback. If autoplay is blocked, a still image remains and the play button allows a manual start. Some battery-saving or browser settings can prevent autoplay.
-
-To replace the footage later, replace `assets/truck-hero.mp4` with your own licensed H.264 MP4, keeping the filename. The website does not depend on a stock-site video URL. Google Fonts is used for typography, with local system-font fallbacks when offline.
-
-## Editing and previewing
-
-Open `index.html` to preview the static site on your computer, or use a local static web server. You can edit the HTML, CSS and JavaScript directly. No developer tooling is needed for hosting.
+- Pearl + Graphite visual system with restrained red accent.
+- Transparent logo asset and compact frosted header.
+- MP4 hero with mobile/desktop sources, pause control, animated highway lines and marquee strip.
+- Mobile-first inventory with two-column compact cards, quick status chips and bottom-sheet filters.
+- Structured inventory data with Available, Sold and Coming Soon states.
+- Dedicated `truck.html?id=...` detail URLs with gallery slots, specifications, finance estimate, share button and Vehicle structured data.
+- Finance calculator with range controls, monthly and bi-weekly estimates, principal/interest cost visualization and enquiry handoff.
+- Netlify-ready lead forms with fallback delivery options.
+- Reworked imagery so major sections no longer repeat the same hero image.
+- Scroll reveals, count-up stats, card motion and reduced-motion support.
+- Canada-focused visual details and copy.
+- Trust, trade-in, recently sold and process sections.
+- Unique page metadata, Open Graph image, AutoDealer/Vehicle structured data, robots file and sitemap template.
+- Responsive image sources, optimized MP4s, lazy loading and lightweight JS.
+- Refactored data/config/UI files for easier future maintenance.

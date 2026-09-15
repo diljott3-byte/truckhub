@@ -1,0 +1,11 @@
+{
+  "name": "Truck Hub Canada",
+  "short_name": "Truck Hub",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f6f2",
+  "theme_color": "#24272b",
+  "icons": [
+    {"src":"assets/images/app-icon.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}

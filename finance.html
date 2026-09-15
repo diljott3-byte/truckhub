@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Commercial Truck Finance Calculator | Truck Hub Canada</title>
+  <meta name="description" content="Estimate monthly and bi-weekly commercial truck payments using price, down payment, trade-in, rate and term.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:title" content="Commercial Truck Finance Calculator | Truck Hub Canada">
+  <meta property="og:description" content="Estimate monthly and bi-weekly commercial truck payments using price, down payment, trade-in, rate and term.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Truck Hub">
+  <meta property="og:image" content="assets/images/og-truck-hub.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link id="canonical-url" rel="canonical" href="">
+  <link rel="icon" href="assets/images/logo-transparent.png" type="image/png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/inventory-data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoDealer","name":"Truck Hub","areaServed":{"@type":"Country","name":"Canada"},"description":"Commercial truck inventory, financing estimates and enquiries for Canadian owner-operators, fleets and businesses."}</script>
+</head>
+<body data-page="finance">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="site-header">
+  <a class="brand" href="index.html" aria-label="Truck Hub home">
+    <img src="assets/images/logo-transparent.png" alt="Truck Hub" width="1206" height="685">
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="finance.html" aria-current="page">Finance</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <a class="header-cta" href="inventory.html"><span>Inventory</span><b>↗</b></a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<dialog class="mobile-menu" id="mobile-menu" aria-label="Navigation menu">
+  <div class="menu-top"><img src="assets/images/logo-transparent.png" alt="" width="1206" height="685"><button class="icon-button" data-close aria-label="Close menu">×</button></div>
+  <span class="eyebrow">TRUCK HUB / CANADA</span>
+  <nav aria-label="Mobile navigation"><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="finance.html" aria-current="page">Finance</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <div class="menu-actions"><a class="button red" href="inventory.html">Browse trucks ↗</a><a class="button ghost" href="finance.html">Estimate payment</a></div>
+  <p>Built to move business.</p>
+</dialog>
+<main id="main">
+<section class="page-hero wrap"><span class="eyebrow">FINANCE / ESTIMATOR</span><div><h1>MAKE THE<br><em>NUMBERS WORK.</em></h1><p>Explore a payment range before you enquire. Estimates are illustrative and exclude tax, licensing, fees and lender-specific terms.</p></div></section>
+<section class="wrap calculator-shell reveal">
+  <form id="calculator" class="calculator-card" novalidate>
+    <div class="calc-inputs"><span class="eyebrow">BUILD YOUR ESTIMATE</span><div class="calc-field"><div><label for="price">Truck price</label><output id="price-output">$124,900</output></div><input id="price" name="price" type="range" min="30000" max="300000" step="1000" value="124900"><input class="number-input" id="price-number" type="number" min="0" step="1000" value="124900"></div><div class="calc-field"><div><label for="down">Down payment</label><output id="down-output">$25,000</output></div><input id="down" name="down" type="range" min="0" max="120000" step="1000" value="25000"><input class="number-input" id="down-number" type="number" min="0" step="1000" value="25000"></div><div class="calc-field"><div><label for="trade">Trade-in value</label><output id="trade-output">$0</output></div><input id="trade" name="trade" type="range" min="0" max="120000" step="1000" value="0"><input class="number-input" id="trade-number" type="number" min="0" step="1000" value="0"></div><div class="two-col"><label>Interest rate <div class="field-suffix"><input id="rate" name="rate" type="number" min="0" max="30" step="0.1" value="7.9"><span>%</span></div></label><label>Term <select id="term" name="term"><option value="24">24 months</option><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></label></div><p id="calc-error" class="error" role="alert"></p></div>
+    <div class="payment-panel"><span class="eyebrow light">ESTIMATED PAYMENT</span><div class="payment-number"><strong id="monthly">—</strong><span>/ month</span></div><div class="biweekly"><span>Bi-weekly estimate</span><strong id="biweekly">—</strong></div><div class="cost-chart" aria-label="Estimated principal and interest breakdown"><div class="cost-bar"><i id="principal-bar"></i><b id="interest-bar"></b></div><div class="legend"><span><i></i> Principal</span><span><b></b> Interest</span></div></div><dl><div><dt>Amount financed</dt><dd id="principal">—</dd></div><div><dt>Total interest</dt><dd id="interest">—</dd></div><div><dt>Total loan payments</dt><dd id="loan-total">—</dd></div><div><dt>Cash + trade contribution</dt><dd id="cash-total">—</dd></div></dl><a id="finance-enquire" class="button pearl full-button" href="contact.html">Request financing ↗</a><p>Estimate only. Actual rates, approvals and terms depend on lender and applicant qualification.</p></div>
+  </form>
+</section>
+<section class="wrap section finance-steps reveal"><div><span class="eyebrow">A SIMPLE PATH</span><h2>FROM BUDGET<br>TO <em>TRUCK.</em></h2></div><div class="process-list"><div><b>01</b><span><strong>Set your range.</strong> Use the estimator to understand a practical purchase price.</span></div><div><b>02</b><span><strong>Choose a truck.</strong> Carry the selected truck and estimate into your enquiry.</span></div><div><b>03</b><span><strong>Confirm real terms.</strong> A lender or finance partner provides actual approval, rate and payment.</span></div></div></section>
+<section id="prequalify" class="wrap enquiry-card reveal"><div><span class="eyebrow">FINANCE ENQUIRY</span><h2>READY TO<br>DISCUSS TERMS?</h2><p>Send the truck and budget context together. The form is Netlify-ready and includes a no-backend fallback.</p></div><form class="enquiry-form" name="finance-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="finance-enquiry"><p class="honeypot"><label>Do not fill <input name="bot-field"></label></p><div class="form-grid"><label>Name<input required name="name" autocomplete="name"></label><label>Phone<input required name="phone" autocomplete="tel" inputmode="tel"></label><label>Email<input name="email" type="email" autocomplete="email"></label><label>Truck / stock<input id="enquiry-truck" name="truck"></label><label class="full">Message<textarea name="message" rows="5" placeholder="Tell us about your business, trade-in or preferred term."></textarea></label></div><button class="button red" type="submit">Send finance enquiry ↗</button><div class="form-result" aria-live="polite"></div></form></section>
+</main><footer class="site-footer">
+  <div class="footer-grid wrap">
+    <div class="footer-brand"><img src="assets/images/logo-transparent.png" alt="Truck Hub" width="1206" height="685"><p>Commercial trucks for the road ahead.</p><span>Canada-wide outlook.</span></div>
+    <div><span class="eyebrow">EXPLORE</span><nav><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="finance.html" aria-current="page">Finance</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div>
+    <div><span class="eyebrow">CONTACT</span><p class="contact-placeholder" data-contact-summary>Phone, email and location can be added in <code>assets/js/config.js</code>.</p><div class="social-row" data-socials></div></div>
+  </div>
+  <div class="footer-bottom wrap"><span>© 2026 TRUCK HUB. All rights reserved.</span><div><button data-legal="privacy">Privacy</button><button data-legal="terms">Terms</button></div><span>CANADA <b>✦</b></span></div>
+</footer>
+<div class="mobile-dock" aria-label="Quick actions">
+  <a href="contact.html" data-dock-enquire><span>✦</span> Enquire</a>
+  <a href="finance.html"><span>$</span> Finance</a>
+  <a href="inventory.html"><span>▦</span> Inventory</a>
+</div>
+<dialog class="legal-dialog" id="legal"><button class="icon-button legal-close" data-close aria-label="Close">×</button><div id="legal-content"></div></dialog>
+</body></html>
