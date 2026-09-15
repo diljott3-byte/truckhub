@@ -58,3 +58,132 @@ img,video{display:block;width:100%}img{height:auto}button,input,select,textarea{
 
 @media(max-width:380px){.wrap{width:calc(100% - 28px)}.hero-copy h1{font-size:3.7rem}.inventory-grid{grid-template-columns:1fr 1fr;gap:7px}.inventory-grid .truck-card h3{font-size:1.18rem}.inventory-grid .truck-card-body{padding:9px}.feature-grid{grid-template-columns:1fr}.feature-grid article{border-right:0}.menu-actions{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1!important;transform:none!important}.road-lines{display:none}}
+
+/* Mobile readability pass — balanced typography for phones */
+@media(max-width:700px){
+  :root{--header:72px}
+  body{font-size:16px;line-height:1.58}
+  .wrap{width:calc(100% - 32px)}
+  .section{padding-block:66px}
+
+  h1{font-size:clamp(3.15rem,13.5vw,4.45rem);line-height:.94}
+  h2{font-size:clamp(2.55rem,10.5vw,3.45rem);line-height:.96}
+  h3{font-size:2rem}
+  p{font-size:14px;line-height:1.62}
+  .lead{font-size:16px;line-height:1.6}
+  .eyebrow{font-size:11px;letter-spacing:.13em;margin-bottom:13px}
+  .sample-note,.form-note{font-size:12px;line-height:1.55}
+
+  .site-header{padding-inline:16px}
+  .brand{width:138px;height:50px}
+  .menu-toggle{width:44px;height:44px}
+  .menu-toggle span{width:19px}
+  .mobile-menu{padding:22px 18px 34px}
+  .mobile-menu nav a{font-size:2.65rem;padding:17px 0}
+  .mobile-menu>p{font-size:12px}
+
+  .button{min-height:48px;padding:12px 18px;font-size:13px;gap:16px}
+  .text-link,.plain{font-size:13px}
+  .icon-button{width:44px;height:44px}
+
+  .hero-inner{padding-bottom:96px}
+  .hero-copy h1{font-size:clamp(3.9rem,16vw,5.2rem);line-height:.9;margin-bottom:18px}
+  .hero-copy p{font-size:15px;line-height:1.55;max-width:34ch}
+  .hero-side{font-size:10px}
+  .marquee>div{font-size:10px}
+
+  .section-head{gap:14px;margin-bottom:25px}
+  .section-head>p{font-size:14px;line-height:1.58}
+  .quick-chips a,.quick-chips button{font-size:12px;padding:9px 13px}
+
+  .truck-card-body{padding:16px}
+  .truck-meta{font-size:10px;line-height:1.4}
+  .truck-card h3{font-size:1.9rem;line-height:1;margin-bottom:12px}
+  .specs{font-size:11px;line-height:1.45}
+  .status-badge,.stock-label{font-size:9px;padding:6px 8px}
+  .price{font-size:18px}
+  .price small{font-size:10px}
+  .estimate{font-size:10px;line-height:1.45}
+
+  .signal-grid strong{font-size:2.45rem}
+  .signal-grid span{font-size:10px;line-height:1.4}
+
+  .page-hero{padding:46px 0 32px}
+  .page-hero h1{font-size:clamp(3.25rem,13.5vw,4.4rem)}
+  .page-hero p{font-size:14px;line-height:1.6}
+
+  .inventory-shell{padding-top:24px}
+  .results-row{font-size:12px}
+  .inventory-grid{gap:10px}
+  .inventory-grid .truck-card-body{padding:12px}
+  .inventory-grid .truck-card h3{font-size:1.5rem;line-height:1.02;margin-bottom:9px}
+  .inventory-grid .specs span{font-size:10.5px;line-height:1.4;margin-bottom:4px}
+  .inventory-grid .truck-meta{font-size:9.5px}
+  .inventory-grid .price{font-size:15px}
+  .inventory-grid .card-arrow{width:34px;height:34px;font-size:17px}
+  .filter-button b{font-size:10px}
+  .filter-sheet h2{font-size:3.15rem}
+  .form-grid label{font-size:12px;line-height:1.35}
+  input,select,textarea{font-size:14px;min-height:48px;padding:12px 11px}
+  .sort-field select{height:48px}
+
+  .calc-inputs{padding:24px 18px}
+  .calc-field label{font-size:13px}
+  .calc-field output{font-size:13px}
+  .number-input{font-size:14px}
+  .field-suffix span{font-size:12px}
+  .error{font-size:12px}
+  .payment-panel{padding:25px 18px}
+  .payment-number strong{font-size:3.55rem}
+  .payment-number span,.biweekly{font-size:12px}
+  .legend{font-size:10px}
+  .payment-panel dl>div{font-size:11.5px}
+  .payment-panel>p{font-size:10.5px;line-height:1.5}
+  .enquiry-card h2{font-size:3.25rem}
+  .form-result textarea{font-size:12px}
+
+  .about-overlay{font-size:10px}
+  .values-grid span{font-size:10px}
+  .values-grid h3{font-size:2.5rem}
+  .values-grid p{font-size:14px;line-height:1.58}
+  .tradein-panel h2{font-size:3rem}
+
+  .contact-panel h2{font-size:3.15rem}
+  .contact-panel p{font-size:14px;line-height:1.6}
+  .contact-actions a{font-size:12px;padding:10px 12px}
+  .contact-panel dt{font-size:10px}
+  .contact-panel dd{font-size:13px}
+  .faq-list summary{font-size:13.5px}
+  .faq-list p{font-size:13px;line-height:1.6}
+
+  .truck-page-copy h1{font-size:3.75rem}
+  .truck-page-price{font-size:27px}
+  .truck-page-note{font-size:12px}
+  .spec-grid dt{font-size:10px}
+  .spec-grid dd{font-size:12.5px}
+  .share-row,.share-row button{font-size:11.5px}
+
+  .footer-brand p{font-size:13px}
+  .footer-brand>span{font-size:10.5px}
+  .site-footer nav a{font-size:12.5px}
+  .site-footer p{font-size:12.5px}
+  .footer-bottom{font-size:10px}
+  .footer-bottom button{font-size:10.5px}
+  .social-row a{font-size:10.5px}
+  .mobile-dock{height:62px}
+  .mobile-dock a{font-size:11px;gap:7px}
+  .mobile-dock span{font-size:15px}
+  .legal-dialog p{font-size:13px}
+}
+
+@media(max-width:380px){
+  .wrap{width:calc(100% - 28px)}
+  body{font-size:15.5px}
+  .hero-copy h1{font-size:3.85rem}
+  .inventory-grid{gap:8px}
+  .inventory-grid .truck-card-body{padding:10px}
+  .inventory-grid .truck-card h3{font-size:1.4rem}
+  .inventory-grid .specs span{font-size:10px}
+  .inventory-grid .price{font-size:14px}
+  .mobile-dock a{font-size:10.5px}
+}
