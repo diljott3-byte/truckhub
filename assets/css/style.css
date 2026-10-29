@@ -187,3 +187,69 @@ img,video{display:block;width:100%}img{height:auto}button,input,select,textarea{
   .inventory-grid .price{font-size:14px}
   .mobile-dock a{font-size:10.5px}
 }
+
+/* Contact information: distinct locations and readable long email addresses. */
+.contact-summary-row{display:block;margin-bottom:8px;overflow-wrap:anywhere}
+.contact-panel dd{overflow-wrap:anywhere}
+.contact-summary-row a:hover,.contact-panel dd a:hover{text-decoration:underline}
+
+/* Trailer inventory and true multi-photo gallery. */
+[hidden]{display:none!important}
+.trailer-card .truck-image-link{aspect-ratio:4/3;background:#eae9e4}
+.trailer-card .truck-image-link img{object-fit:contain}
+.trailer-card:hover .truck-image-link img{transform:none}
+.trailer-card .price{font-size:clamp(12px,1.3vw,17px)}
+.trailer-card .specs span{white-space:normal;overflow:visible}
+.truck-gallery-main{aspect-ratio:4/3}
+.truck-gallery-main img{object-fit:contain}
+.thumb-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.thumb{aspect-ratio:4/3}
+.thumb img,.thumb:nth-child(2) img,.thumb:nth-child(3) img{object-fit:contain;object-position:center;transform:none}
+.gallery-navigation{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.gallery-navigation button{border:1px solid var(--line);width:44px;height:44px;flex-shrink:0}
+#gallery-caption{font-size:12px;text-align:center}
+.truck-page-copy h1{font-size:clamp(2.5rem,4vw,4.5rem);overflow-wrap:break-word}
+@media(max-width:700px){.thumb-row{grid-template-columns:repeat(3,minmax(0,1fr))}.trailer-card .truck-card-body{padding:10px}.trailer-card .card-bottom{gap:5px}.trailer-card .text-link{font-size:11px}}
+
+.inspection-note{padding:12px 14px;border-left:3px solid #ae6600;background:#fff2dd;color:#754600;font-size:13px;font-weight:600}
+
+
+/* Critical small-screen overflow fixes. Keep existing Pearl / Graphite design. */
+.contact-grid > *, .contact-panel, .contact-form, .contact-panel dl, .contact-actions {min-width:0}
+.contact-panel h2, .page-hero h1 {overflow-wrap:break-word}
+.contact-panel dd, .contact-panel a, .contact-summary-row {overflow-wrap:anywhere}
+@media (max-width:450px){
+  .contact-panel h2 {font-size:clamp(2.25rem,9.7vw,3.15rem)}
+  .contact-grid {grid-template-columns:minmax(0,1fr)}
+  .form-grid {grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .contact-form .form-grid {grid-template-columns:minmax(0,1fr)}
+  .contact-form .form-grid .full {grid-column:auto}
+}
+@media (max-width:380px){
+  .page-hero h1 {font-size:clamp(2.7rem,12vw,3.25rem);overflow-wrap:anywhere}
+  .split-copy h2, .section h2 {overflow-wrap:anywhere}
+}
+
+
+/* Safe intrinsic sizing on very narrow devices: no palette or typography changes. */
+.page-hero > div, .page-hero > div > *, .calculator-card > *, .truck-page-layout > *, .split-copy > *, .footer-grid > * {min-width:0}
+.contact-grid, .calculator-card, .truck-page-layout, .split-copy, .footer-grid {max-width:100%}
+.contact-panel h2, .page-hero h1, .truck-page-copy h1 {max-width:100%}
+.contact-panel dd, .contact-panel dd a, .footer-grid, .footer-grid a {overflow-wrap:anywhere}
+.enquiry-form .form-grid > * {min-width:0}
+.enquiry-form :is(input, select, textarea) {max-width:100%}
+.enquiry-form button:disabled {opacity:.65;cursor:wait}
+@media(max-width:450px){
+  .page-hero > div, .contact-grid {grid-template-columns:minmax(0,1fr)}
+  .contact-panel h2 {font-size:clamp(2.25rem, 9.5vw, 3.15rem)}
+}
+@media(max-width:360px){
+  .page-hero h1 {font-size:clamp(2.55rem, 11.5vw, 3.25rem)}
+  .contact-panel h2 {font-size:clamp(2.05rem, 9vw, 2.65rem)}
+}
+
+/* Prevent intrinsic image/text width from expanding the homepage story grid. */
+.split-story > *, .media-stack, .story-copy {min-width:0;max-width:100%}
+@media(max-width:700px){.split-story{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:701px){.split-story{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:701px) and (max-width:1000px){.story-copy h2{font-size:clamp(3rem,6vw,3.6rem)}}
