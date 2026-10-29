@@ -4,7 +4,7 @@ window.TRUCK_HUB_CONFIG = {
   country: 'Canada',
   phone: '+1 778-956-1131',
   secondaryPhone: '+1 604-991-3131',
-  whatsapp: '',
+  whatsapp: '+1 778 956 1131',
   email: 'admin.truckhubsalesinc@gmail.com',
   location: '12772 82 Ave, Surrey, BC V3W 6W1',
   officeAddress: '12772 82 Ave, Surrey, BC V3W 6W1',

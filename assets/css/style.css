@@ -253,3 +253,54 @@ img,video{display:block;width:100%}img{height:auto}button,input,select,textarea{
 @media(max-width:700px){.split-story{grid-template-columns:minmax(0,1fr)}}
 @media(min-width:701px){.split-story{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:701px) and (max-width:1000px){.story-copy h2{font-size:clamp(3rem,6vw,3.6rem)}}
+
+/* 2026-10-29 site refinements: original Pearl/Graphite/Red design tokens unchanged. */
+/* Final supplied logo: cropped transparent original for clear header/footer readability. */
+.brand{width:150px;height:60px;flex-shrink:0}
+.brand img{object-fit:contain;object-position:left center}
+.menu-top img{width:142px;height:70px;object-fit:contain;object-position:left center}
+.footer-brand img{object-fit:contain;object-position:left center}
+/* Compact, right-hand mobile navigation drawer. Dialog remains modal and supports Escape/backdrop close. */
+.mobile-menu{
+  position:fixed;inset:0 0 0 auto;margin:0 0 0 auto;
+  width:min(352px,86vw);height:100dvh;max-height:100dvh;max-width:none;
+  padding:18px 19px max(24px,env(safe-area-inset-bottom));
+  background:var(--pearl);color:var(--graphite);border:0;
+  border-left:1px solid var(--line);box-shadow:-18px 0 50px #10121422;
+  overflow-y:auto;overscroll-behavior:contain;
+}
+.mobile-menu::backdrop{background:rgba(18,21,24,.62);backdrop-filter:blur(2px)}
+.mobile-menu .menu-top{margin:0 0 15px;min-height:70px;gap:12px}
+.mobile-menu .menu-top .icon-button{width:40px;height:40px;flex-shrink:0;border-color:var(--line);font-size:24px;background:#fff5;border-radius:8px}
+.mobile-menu>.eyebrow{font-size:10px;letter-spacing:.16em;margin:0 0 13px;color:var(--muted)}
+.mobile-menu nav{margin:0 0 20px;border-top:1px solid var(--line)}
+.mobile-menu nav a{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:51px;padding:11px 3px;border-bottom:1px solid var(--line);
+  font-family:var(--body);font-weight:700;font-size:16px;line-height:1.3;
+  letter-spacing:0;transition:color .18s ease,padding-left .18s ease;
+}
+.mobile-menu nav a::after{content:'↗';font-size:15px;font-weight:500;color:var(--muted)}
+.mobile-menu nav a[aria-current]{color:var(--red)}
+.mobile-menu nav a[aria-current]::after{color:var(--red)}
+.mobile-menu nav a:hover{padding-left:7px;color:var(--red)}
+.mobile-menu .menu-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin-top:5px}
+.mobile-menu .menu-actions .button{width:100%;min-height:47px;justify-content:space-between;font-size:13px;border-radius:3px;padding:11px 15px}
+.mobile-menu>p{display:none}
+/* Home-only floating WhatsApp entry point. WhatsApp brand green is limited to the icon. */
+.home-whatsapp{
+  position:fixed;top:calc(var(--header) + 14px);right:max(16px,env(safe-area-inset-right));z-index:49;
+  display:grid;place-items:center;width:45px;height:45px;border-radius:50%;
+  background:#25D366;color:white;box-shadow:0 5px 19px #0e271a37;
+  border:2px solid #fff;transition:transform .2s,box-shadow .2s;
+}
+.home-whatsapp svg{height:27px;width:27px;display:block}
+.home-whatsapp:hover{transform:translateY(-2px);box-shadow:0 7px 23px #0e271a4d}
+.home-whatsapp:focus-visible{outline:3px solid var(--graphite);outline-offset:3px}
+.developer-credit{padding-top:10px;padding-bottom:6px;margin-top:10px;border-top:1px solid #ffffff21;text-align:center;color:#c4c8c9;font-size:11px;letter-spacing:.02em}
+.developer-credit strong{font-weight:700;color:#f2f1ed}
+@media(max-width:380px){.brand{width:135px}.mobile-menu nav a{font-size:15px;min-height:49px}.mobile-menu .menu-top img{width:120px}}
+@media(min-width:860px){.mobile-menu{display:none}.developer-credit{text-align:right}}
+@media(prefers-reduced-motion:reduce){.home-whatsapp{transition:none}}
+/* Keep the exact black/red brand legible against the graphite footer. */
+.footer-brand img{background:var(--pearl);padding:5px 7px;border-radius:5px}
